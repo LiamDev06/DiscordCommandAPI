@@ -5,29 +5,23 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 
+import java.util.Arrays;
+
 // Start by extending the bot command class
-public class HelloCommand extends BotCommand {
+public class WelcomeCommand extends BotCommand {
 
     // Insert the actual command here, do not insert it with the prefix
-    public HelloCommand(){
-        super("hello");
+    // Feel free to add aliases as well
+    public WelcomeCommand(){
+        super("welcome", Arrays.asList("welcomehere", "welcometoserver"));
     }
 
     //Implement the onCommand method, this will be called everytime the command you specified above is executed
     @Override
     public void onCommand(Member member, Message message, TextChannel channel, String[] args) {
-        channel.sendMessage("Hello there! I hope you are great today, I am at least!").queue();
-        channel.sendMessage("I hope you like using the Command API!").queue();
+        channel.sendMessage("Welcome to the server fella!").queue();
     }
 }
-
-
-
-
-
-
-
-
 
 
 

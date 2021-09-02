@@ -2,14 +2,15 @@ package me.liamhbest.example;
 
 import com.github.liamhbest0608.CommandAPI;
 import me.liamhbest.example.example_commands.HelloCommand;
+import me.liamhbest.example.example_commands.WelcomeCommand;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
 import javax.security.auth.login.LoginException;
 
-public class DiscordBot {
+public class Main {
 
-    private static final String TOKEN = "BOT_TOKEN";
+    private static final String TOKEN = "ODYyMzE0OTk5MTM2OTExMzcx.YOWjbA.AxvZZC-qyB5naPSkJU5rLdWHDuc";
     private static JDA jda;
 
     public static void main(String[] args) {
@@ -41,6 +42,7 @@ public class DiscordBot {
 
         new CommandAPI("!", jda, true);
         new HelloCommand();
+        new WelcomeCommand();
 
         System.out.println("The bot has been loaded and is ready for use.");
     }
